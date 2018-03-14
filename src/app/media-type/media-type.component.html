@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-md-2">
+        <h3>{{title}}</h3>
+        <ul class="media-types">
+          <li *ngFor="let mediaType of mediaTypes"
+            [class.selected]="mediaType === selectedMediaType"
+            (click)="onSelect(mediaType)">
+            {{mediaType.name}}
+          </li>
+        </ul>
+    </div>
+    <div class="col-md-10">
+        <app-media-type-detail [mediaType]="selectedMediaType"></app-media-type-detail>
+    </div>
+  </div>
+
+
